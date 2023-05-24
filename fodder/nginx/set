@@ -1,0 +1,51 @@
+sed -i -e 's/\r$//' /usr/bin/add-host
+sed -i -e 's/\r$//' /usr/bin/addl
+sed -i -e 's/\r$//' /usr/bin/adds
+sed -i -e 's/\r$//' /usr/bin/addt
+sed -i -e 's/\r$//' /usr/bin/addtrgo
+sed -i -e 's/\r$//' /usr/bin/addv
+sed -i -e 's/\r$//' /usr/bin/cek-bandwidth
+sed -i -e 's/\r$//' /usr/bin/cek-trafik
+sed -i -e 's/\r$//' /usr/bin/cekl
+sed -i -e 's/\r$//' /usr/bin/ceks
+sed -i -e 's/\r$//' /usr/bin/cekt
+sed -i -e 's/\r$//' /usr/bin/cektrgo
+sed -i -e 's/\r$//' /usr/bin/cekv
+sed -i -e 's/\r$//' /usr/bin/clerlog
+sed -i -e 's/\r$//' /usr/bin/clog
+sed -i -e 's/\r$//' /usr/bin/dell
+sed -i -e 's/\r$//' /usr/bin/dels
+sed -i -e 's/\r$//' /usr/bin/delt
+sed -i -e 's/\r$//' /usr/bin/deltrgo
+sed -i -e 's/\r$//' /usr/bin/delv
+sed -i -e 's/\r$//' /usr/bin/genssl
+sed -i -e 's/\r$//' /usr/bin/menu
+sed -i -e 's/\r$//' /usr/bin/menugo
+sed -i -e 's/\r$//' /usr/bin/menul
+sed -i -e 's/\r$//' /usr/bin/menus
+sed -i -e 's/\r$//' /usr/bin/menussh
+sed -i -e 's/\r$//' /usr/bin/menut
+sed -i -e 's/\r$//' /usr/bin/menuv
+sed -i -e 's/\r$//' /usr/bin/notramcpu
+sed -i -e 's/\r$//' /usr/bin/renel
+sed -i -e 's/\r$//' /usr/bin/renes
+sed -i -e 's/\r$//' /usr/bin/renet
+sed -i -e 's/\r$//' /usr/bin/renev
+sed -i -e 's/\r$//' /usr/bin/renewtrgo
+sed -i -e 's/\r$//' /usr/bin/restart
+sed -i -e 's/\r$//' /usr/bin/running
+sed -i -e 's/\r$//' /usr/bin/speedtes_cli
+sed -i -e 's/\r$//' /usr/bin/trisltrojan
+sed -i -e 's/\r$//' /usr/bin/trialtrojango
+sed -i -e 's/\r$//' /usr/bin/trtl
+sed -i -e 's/\r$//' /usr/bin/trtv
+sed -i -e 's/\r$//' /usr/bin/usern
+curl https://raw.githubusercontent.com/xxxserxxx/gotop/master/scripts/download.sh | bash && chmod +x gotop && sudo mv gotop /usr/local/bin/
+  
+  
+  
+  
+  
+  
+  
+  
