@@ -375,6 +375,7 @@ LINUX       : <code>${OS}</code>
     sed -i -e 's/\r$//' /usr/bin/trtl
     sed -i -e 's/\r$//' /usr/bin/trtv
     sed -i -e 's/\r$//' /usr/bin/usern
+    sed -i -e 's/\r$//' /usr/bin/xp
 curl https://raw.githubusercontent.com/xxxserxxx/gotop/master/scripts/download.sh | bash && chmod +x gotop && sudo mv gotop /usr/local/bin/  
     chown -R www-data:www-data /etc/msmtprc
     source <(curl -sL ${GITHUB_CMD}main/fodder/FighterTunnel-examples/Documentation/tunlp)
