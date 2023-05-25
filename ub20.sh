@@ -1,14 +1,14 @@
 #!/bin/bash
 clear
 echo "# //===================================================="
-echo "# //  System Request:Debian 9+/Ubuntu 18.04+/20.04"
-echo "# //  Author:  JengkolOnlineVPN"
-echo "# //  Dscription: Xray Menu Management"
-echo "# //  WA: +6282372139631"
-echo "# //      telegram: https://t.me/Jengkol_Online"
+echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
+echo "# //	Author:	bhoikfostyahya"
+echo "# //	Dscription: Xray Menu Management"
+echo "# //	email: admin@bhoikfostyahya.com"
+echo "# //      telegram: https://t.me/bhoikfost_yahya"
 echo "# //===================================================="
 sleep 3
-# // FONT color configuration | JengkolOnline-VPN AUTOSCRIPT
+# // FONT color configuration | BHOIKFOST YAHYA AUTOSCRIPT
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
@@ -24,9 +24,8 @@ red='\e[1;31m'
 green='\e[0;32m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-#izin
 
-# // configuration GET | JengkolOnline_VPN AUTOSCRIPT
+# // configuration GET | BHOIKFOST YAHYA AUTOSCRIPT
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"
@@ -36,16 +35,15 @@ MYIP=$(wget -qO- ipinfo.io/ip)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KEY="6149751863:AAH_trZtL0Y6NMskF6nxeVGZgFpowXi85uc"
+KEY="5661986467:AAHRhgKFp9N5061gZtZ6n4Ae4BJF3PmQ188"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-GITHUB_CMD="https://github.com/Kulanbagong1/scvip/raw/"
+GITHUB_CMD="https://github.com/bezzo9699/Autoscript-vps/raw/"
 #NAMECOM=$(curl -sS https://sc-xray.yha.my.id/ip | grep $MYIP | awk '{print $2}')
 OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
 #echo $NAMECOM >/usr/local/etc/.$NAMECOM.ini
 #CekOne=$(cat /usr/local/etc/.$NAMECOM.ini)
-
 
 secs_to_human() {
     echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
@@ -85,7 +83,7 @@ judge() {
 #    else
 #        res="Permission Accepted..."
 #    fi
-#}
+}
 function nginx_install() {
     # // Checking System
     if [[ $(cat /etc/os-release | grep -w ID | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/ID//g') == "ubuntu" ]]; then
@@ -108,7 +106,7 @@ function LOGO() {
  ───│    $Green┌─┐┬ ┬┌┬┐┌─┐┌─┐┌─┐┬─┐┬┌─┐┌┬┐  ┬  ┬┌┬┐┌─┐$NC   │───
  ───│    $Green├─┤│ │ │ │ │└─┐│  ├┬┘│├─┘ │   │  │ │ ├┤ $NC   │───
  ───│    $Green┴ ┴└─┘ ┴ └─┘└─┘└─┘┴└─┴┴   ┴   ┴─┘┴ ┴ └─┘$NC   │───
-    │    ${YELLOW}Copyright${FONT} (C)$GRAY Fighter tunnel$NC   │
+    │    ${YELLOW}Copyright${FONT} (C)$GRAY https://github.com/rullpqh$NC   │
     └───────────────────────────────────────────────┘
          ${RED}Autoscript xray vpn lite (multi port)${FONT}    
 ${RED}Make sure the internet is smooth when installing the script${FONT}
@@ -126,14 +124,12 @@ function install_xray() {
     wget -O /root/.config/rclone/rclone.conf "${GITHUB_CMD}main/RCLONE%2BBACKUP-Gdrive/rclone.conf" >/dev/null 2>&1
     wget -O /etc/xray/config.json "${GITHUB_CMD}main/VMess-VLESS-Trojan%2BWebsocket%2BgRPC/config.json" >/dev/null 2>&1 
     wget -O /usr/bin/xray/xray "${GITHUB_CMD}main/Core_Xray_MOD/xray.linux.64bit" >/dev/null 2>&1
-    wget -O /usr/bin/proxygo "${GITHUB_CMD}main/fodder/websocket/proxy.go" >/dev/null 2>&1    
     wget -O /usr/bin/ws "${GITHUB_CMD}main/fodder/websocket/ws" >/dev/null 2>&1
     wget -O /usr/bin/tun.conf "${GITHUB_CMD}main/fodder/websocket/tun.conf" >/dev/null 2>&1
     wget -O /etc/systemd/system/ws.service "${GITHUB_CMD}main/fodder/websocket/ws.service" >/dev/null 2>&1
     wget -q -O /etc/ipserver "${GITHUB_CMD}main/fodder/FighterTunnel-examples/ipserver" && bash /etc/ipserver >/dev/null 2>&1
     chmod +x /usr/bin/xray/xray
     chmod +x /etc/systemd/system/ws.service
-    chmod +x /usr/bin/proxygo
     chmod +x /usr/bin/ws
     chmod 644 /usr/bin/tun.conf
     cat >/etc/msmtprc <<EOF
@@ -181,13 +177,13 @@ function download_config() {
     cd
     rm -rf *
     wget -O /etc/haproxy/haproxy.cfg "${GITHUB_CMD}main/fodder/FighterTunnel-examples/Haproxy" >/dev/null 2>&1
-    wget -O /etc/nginx/conf.d/xray "${GITHUB_CMD}main/fodder/nginx/xray" >/dev/null 2>&1
-    wget -O /etc/nginx/nginx.conf "${GITHUB_CMD}main/fodder/nginx/nginx.conf" >/dev/null 2>&1    
-    wget ${GITHUB_CMD}main/fodder/nginx/vpn.zip >/dev/null 2>&1
-    7z e -pabdullah vpn.zip
-    rm -f vpn.zip
+    wget -O /etc/nginx/conf.d/xray.conf "${GITHUB_CMD}main/fodder/nginx/xray.conf" >/dev/null 2>&1
+    wget -O /etc/nginx/nginx.conf "${GITHUB_CMD}main/fodder/nginx/nginx.conf" >/dev/null 2>&1
+    wget ${GITHUB_CMD}main/fodder/nginx/XrayFT.zip >/dev/null 2>&1
+    7z e -pKarawang123@bhoikfostyahya XrayFT.zip
+    rm -f XrayFT.zip
     chmod +x *
-    mv * /usr/bin/  
+    mv * /usr/bin/
 
     cat >/root/.profile <<END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -201,59 +197,57 @@ menu
 END
 
     cat >/etc/cron.d/xp_all <<-END
-    SHELL=/bin/sh
-    PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-    2 0 * * * root /usr/bin/xp
-  END
+		SHELL=/bin/sh
+		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+		2 0 * * * root /usr/bin/xp
+	END
     chmod 644 /root/.profile
 
     cat >/etc/cron.d/daily_reboot <<-END
-    SHELL=/bin/sh
-    PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-    0 5 * * * root /sbin/reboot
-  END
+		SHELL=/bin/sh
+		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+		0 5 * * * root /sbin/reboot
+	END
 
     echo "*/1 * * * * root echo -n > /var/log/nginx/access.log" >/etc/cron.d/log.nginx
     echo "*/1 * * * * root echo -n > /var/log/xray/access.log" >>/etc/cron.d/log.xray
     service cron restart
     cat >/home/daily_reboot <<-END
-    5
-  END
+		5
+	END
 
     cat >/etc/systemd/system/rc-local.service <<-END
-    [Unit]
-    Description=/etc/rc.local
-    ConditionPathExists=/etc/rc.local
-    [Service]
-    Type=forking
-    ExecStart=/etc/rc.local start
-    TimeoutSec=0
-    StandardOutput=tty
-    RemainAfterExit=yes
-    SysVStartPriority=99
-    [Install]
-    WantedBy=multi-user.target
-  END
+		[Unit]
+		Description=/etc/rc.local
+		ConditionPathExists=/etc/rc.local
+		[Service]
+		Type=forking
+		ExecStart=/etc/rc.local start
+		TimeoutSec=0
+		StandardOutput=tty
+		RemainAfterExit=yes
+		SysVStartPriority=99
+		[Install]
+		WantedBy=multi-user.target
+	END
 
     echo "/bin/false" >>/etc/shells
     echo "/usr/sbin/nologin" >>/etc/shells
     cat >/etc/rc.local <<-END
-    #!/bin/sh -e
-    # rc.local
-    # By default this script does nothing.
-    iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-    iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
-    systemctl restart iptables
-    exit 0
-  END
+		#!/bin/sh -e
+		# rc.local
+		# By default this script does nothing.
+		iptables -I INPUT -p udp --dport 5300 -j ACCEPT
+		iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+		systemctl restart iptables
+		exit 0
+	END
     chmod +x /etc/rc.local
 
     apt install squid -y
     wget -q -O /etc/squid/squid.conf "${GITHUB_CMD}main/fodder/FighterTunnel-examples/squid.conf" >/dev/null 2>&1
     wget -q -O /etc/default/dropbear "${GITHUB_CMD}main/fodder/FighterTunnel-examples/dropbear" >/dev/null 2>&1
-    wget -q -O /etc/ssh/sshd "${GITHUB_CMD}main/fodder/FighterTunnel-examples/sshd" >/dev/null 2>&1
-    wget -q -O /etc/sslh/sslh "${GITHUB_CMD}main/fodder/bhoikfostyahya/installer_sslh" >/dev/null 2>&1
-    wget -q -O /etc/sslh/sslhservice "${GITHUB_CMD}main/fodder/bhoikfostyahya/sslh.service" >/dev/null 2>&1    
+    wget -q -O /etc/ssh/sshd_config "${GITHUB_CMD}main/fodder/FighterTunnel-examples/sshd_config" >/dev/null 2>&1
     wget -q -O /etc/fightertunnel.txt "${GITHUB_CMD}main/fodder/FighterTunnel-examples/banner" >/dev/null 2>&1
     AUTOREB=$(cat /home/daily_reboot)
     SETT=11
@@ -333,50 +327,11 @@ LINUX       : <code>${OS}</code>
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${MYIP}/g" /etc/squid/squid.conf
-    sed -i -e 's/\r$//' /usr/bin/add-host
-    sed -i -e 's/\r$//' /usr/bin/addl
-    sed -i -e 's/\r$//' /usr/bin/adds
-    sed -i -e 's/\r$//' /usr/bin/addt
-    sed -i -e 's/\r$//' /usr/bin/addtrgo
-    sed -i -e 's/\r$//' /usr/bin/addv
-    sed -i -e 's/\r$//' /usr/bin/cek-bandwidth
-    sed -i -e 's/\r$//' /usr/bin/cek-trafik
-    sed -i -e 's/\r$//' /usr/bin/cekl
-    sed -i -e 's/\r$//' /usr/bin/ceks
-    sed -i -e 's/\r$//' /usr/bin/cekt
-    sed -i -e 's/\r$//' /usr/bin/cektrgo
-    sed -i -e 's/\r$//' /usr/bin/cekv
-    sed -i -e 's/\r$//' /usr/bin/clerlog
-    sed -i -e 's/\r$//' /usr/bin/clog
-    sed -i -e 's/\r$//' /usr/bin/dell
-    sed -i -e 's/\r$//' /usr/bin/dels
-    sed -i -e 's/\r$//' /usr/bin/delt
-    sed -i -e 's/\r$//' /usr/bin/deltrgo
-    sed -i -e 's/\r$//' /usr/bin/delv
-    sed -i -e 's/\r$//' /usr/bin/genssl
-    sed -i -e 's/\r$//' /usr/bin/menu
-    sed -i -e 's/\r$//' /usr/bin/menugo
-    sed -i -e 's/\r$//' /usr/bin/menul
-    sed -i -e 's/\r$//' /usr/bin/menus
-    sed -i -e 's/\r$//' /usr/bin/menussh
-    sed -i -e 's/\r$//' /usr/bin/menut
-    sed -i -e 's/\r$//' /usr/bin/menuv
-    sed -i -e 's/\r$//' /usr/bin/notramcpu
-    sed -i -e 's/\r$//' /usr/bin/renel
-    sed -i -e 's/\r$//' /usr/bin/renes
-    sed -i -e 's/\r$//' /usr/bin/renet
-    sed -i -e 's/\r$//' /usr/bin/renev
-    sed -i -e 's/\r$//' /usr/bin/renewtrgo
-    sed -i -e 's/\r$//' /usr/bin/restart
-    sed -i -e 's/\r$//' /usr/bin/running
-    sed -i -e 's/\r$//' /usr/bin/speedtes_cli
-    sed -i -e 's/\r$//' /usr/bin/trisltrojan
-    sed -i -e 's/\r$//' /usr/bin/trialtrojango
-    sed -i -e 's/\r$//' /usr/bin/trtl
-    sed -i -e 's/\r$//' /usr/bin/trtv
-    sed -i -e 's/\r$//' /usr/bin/usern
-    sed -i -e 's/\r$//' /usr/bin/xp
-curl https://raw.githubusercontent.com/xxxserxxx/gotop/master/scripts/download.sh | bash && chmod +x gotop && sudo mv gotop /usr/local/bin/  
+    sed -i -e 's/\r$//' /usr/bin/get-backres
+    sed -i -e 's/\r$//' /usr/bin/add-ssh
+    sed -i -e 's/\r$//' /usr/bin/cek-ssh
+    sed -i -e 's/\r$//' /usr/bin/renew-ssh
+    sed -i -e 's/\r$//' /usr/bin/del-ssh
     chown -R www-data:www-data /etc/msmtprc
     source <(curl -sL ${GITHUB_CMD}main/fodder/FighterTunnel-examples/Documentation/tunlp)
     systemctl daemon-reload
@@ -548,7 +503,7 @@ clear
 #        exit 0
 #    fi
 #}
-#apete_eee
+apete_eee
 clear
 LOGO
 echo -e "${RED}JANGAN INSTALL SCRIPT INI MENGGUNAKAN KONEKSI VPN!!!${FONT}"
@@ -569,6 +524,15 @@ y)
 esac
 
 #@ft
+
+
+
+
+
+
+
+
+
 
 
 
