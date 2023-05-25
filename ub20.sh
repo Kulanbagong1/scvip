@@ -45,7 +45,7 @@ Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
 #CekOne=$(cat /usr/local/etc/.$NAMECOM.ini)
 data_ip="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip"
 checking_sc() {
-  useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
+  useexp=$(wget -qO- $data_ip | grep $MYIP | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
     echo -ne
   else
@@ -54,7 +54,7 @@ checking_sc() {
     echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
     echo -e ""
     echo -e "            ${RED}PERMISSION DENIED !${NC}"
-    echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
+    echo -e "   \033[0;33mYour VPS${NC} $MYIP \033[0;33mHas been Banned${NC}"
     echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
     echo -e "             \033[0;33mContact Admin :${NC}"
     echo -e "      \033[0;36mTelegram${NC} t.me/Jengkol_Online"
