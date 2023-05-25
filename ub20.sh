@@ -1,12 +1,11 @@
 #!/bin/bash
 clear
-echo "# //===================================================="
-echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
-echo "# //	Author:	"
-echo "# //	Dscription: Xray Menu Management"
-echo "# //	email: admin@bhoikfostyahya.com"
-echo "# //      telegram: https://t.me/bhoikfost_yahya"
-echo "# //===================================================="
+    echo "# //===================================================="
+    echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
+    echo -e "             \033[0;33mContact Admin :${NC}"
+    echo -e "      \033[0;36mTelegram${NC} t.me/Jengkol_Online"
+    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6282372139631"
+    echo "# //===================================================="
 sleep 3
 # // FONT color configuration | BHOIKFOST YAHYA AUTOSCRIPT
 Green="\e[92;1m"
