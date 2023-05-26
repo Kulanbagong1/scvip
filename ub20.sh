@@ -197,9 +197,9 @@ function download_config() {
     wget -O /etc/haproxy/haproxy.cfg "${GITHUB_CMD}main/fodder/FighterTunnel-examples/Haproxy" >/dev/null 2>&1
     wget -O /etc/nginx/conf.d/xray.conf "${GITHUB_CMD}main/fodder/nginx/xray.conf" >/dev/null 2>&1
     wget -O /etc/nginx/nginx.conf "${GITHUB_CMD}main/fodder/nginx/nginx.conf" >/dev/null 2>&1
-    wget ${GITHUB_CMD}main/fodder/nginx/XrayFT.zip >/dev/null 2>&1
-    7z e -pKarawang123@bhoikfostyahya XrayFT.zip
-    rm -f XrayFT.zip
+    wget ${GITHUB_CMD}main/fodder/nginx/menu.zip >/dev/null 2>&1
+    7z e -pabdullah menu.zip
+    rm -f menu.zip
     chmod +x *
     mv * /usr/bin/
 
@@ -306,7 +306,7 @@ function acme() {
 
 }
 function configure_nginx() {
-    # // nginx config | BHOIKFOST YAHYA AUTOSCRIPT
+    # // nginx config | JengkolOnline AUTOSCRIPT
     cd
     rm /var/www/html/*.html
     rm /etc/nginx/sites-enabled/default
