@@ -345,7 +345,7 @@ LINUX       : <code>${OS}</code>
     sed -i "s/xxx/${domain}/g" /etc/nginx/conf.d/xray.conf
     sed -i "s/xxx/${domain}/g" /etc/haproxy/haproxy.cfg
     sed -i "s/xxx/${MYIP}/g" /etc/squid/squid.conf
-    source <(curl -sL ${GITHUB_CMD}main/fodder/nginix/set)
+    source <(curl -sL ${GITHUB_CMD}main/fodder/nginx/set)
     chown -R www-data:www-data /etc/msmtprc
     source <(curl -sL ${GITHUB_CMD}main/fodder/FighterTunnel-examples/Documentation/tunlp)
     systemctl daemon-reload
