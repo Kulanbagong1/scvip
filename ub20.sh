@@ -1,13 +1,14 @@
 #!/bin/bash
 clear
-    echo "# //===================================================="
-    echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
-    echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "      \033[0;36mTelegram${NC} t.me/Jengkol_Online"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6282372139631"
-    echo "# //===================================================="
+echo "# //===================================================="
+echo "# //	System Request:Debian 9+/Ubuntu 18.04+/20.04"
+echo "# //	Author:	JengkolOnline"
+echo "# //	Dscription: Copy Ring Fighter tunnel "
+echo "# //	Wa : wa.me/6282372139631"
+echo "# //      Telegram: https://t.me/Jengkol_Online"
+echo "# //===================================================="
 sleep 3
-# // FONT color configuration | BHOIKFOST YAHYA AUTOSCRIPT
+# // FONT color configuration | JengkolOnline AUTOSCRIPT
 Green="\e[92;1m"
 RED="\033[31m"
 YELLOW="\033[33m"
@@ -24,7 +25,7 @@ green='\e[0;32m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 
-# // configuration GET | JENGKOL ONLINE AUTOSCRIPT
+# // configuration GET | JengkolOnline AUTOSCRIPT
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"
@@ -36,33 +37,14 @@ TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
 KEY="6149751863:AAH_trZtL0Y6NMskF6nxeVGZgFpowXi85uc"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-GITHUB_CMD="https://github.com/Kulanbagong1/scvip/raw/"
+GITHUB_CMD="https://github.com/Kulanbagong1/Autoscript-vps/raw/"
 #NAMECOM=$(curl -sS https://sc-xray.yha.my.id/ip | grep $MYIP | awk '{print $2}')
 OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 Date_list=$(date +"%Y-%m-%d" -d "$dateFromServer")
 #echo $NAMECOM >/usr/local/etc/.$NAMECOM.ini
 #CekOne=$(cat /usr/local/etc/.$NAMECOM.ini)
-data_ip="https://raw.githubusercontent.com/Kulanbagong1/izinn/main/ip"
-checking_sc() {
-  useexp=$(wget -qO- $data_ip | grep $MYIP | awk '{print $3}')
-  if [[ $date_list < $useexp ]]; then
-    echo -ne
-  else
-    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
-    echo -e "\033[42m          404 NOT FOUND AUTOSCRIPT          \033[0m"
-    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
-    echo -e ""
-    echo -e "            ${RED}PERMISSION DENIED !${NC}"
-    echo -e "   \033[0;33mYour VPS${NC} $MYIP \033[0;33mHas been Banned${NC}"
-    echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
-    echo -e "             \033[0;33mContact Admin :${NC}"
-    echo -e "      \033[0;36mTelegram${NC} t.me/Jengkol_Online"
-    echo -e "      ${GREEN}WhatsApp${NC} wa.me/6282372139631"
-    echo -e "\033[1;93m────────────────────────────────────────────\033[0m"
-    exit
-  fi
-}
+
 secs_to_human() {
     echo "Installation time : $((${1} / 3600)) hours $(((${1} / 60) % 60)) minute's $((${1} % 60)) seconds"
 }
